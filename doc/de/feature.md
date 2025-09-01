@@ -1,0 +1,3 @@
+# Funktionalität
+
+Im Znuny Standard (ist es nicht möglich/ist es eingeschränkt möglich).... Diese Erweiterung enthält die Funktionalität um ...

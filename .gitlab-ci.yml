@@ -1,0 +1,7 @@
+image: registry.znuny.com/znuny/internal/docker-znuny-ci:latest
+
+include:
+  - project: $INCLUDE_PROJECT
+    file: '/templates/gitlab/default/default.yml'
+
+

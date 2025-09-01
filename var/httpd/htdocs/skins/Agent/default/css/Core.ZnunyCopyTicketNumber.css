@@ -1,0 +1,116 @@
+/*
+Copyright (C) 2012 Znuny GmbH, https://znuny.com/
+
+This software comes with ABSOLUTELY NO WARRANTY. For details, see
+the enclosed file COPYING for license information (AGPL). If you
+did not receive this file, see http://www.gnu.org/licenses/agpl.txt.
+*/
+
+/**
+ * @package     Skin "default"
+ * @section
+ */
+
+@media screen,projection,tv,handheld {
+
+    /* Copy Ticket Icon Styles */
+    .CopyTicketIcon {
+        display: inline-block;
+        cursor: pointer;
+        margin-right: 5px;
+        font-size: 14px;
+        position: relative;
+        transition: opacity 0.2s ease;
+    }
+
+    .CopyTicketIcon:hover {
+        opacity: 0.8;
+    }
+
+    /* Hover Menu Styles */
+    .CopyTicketMenu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: #fff;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+        z-index: 1000;
+        min-width: 180px;
+        margin-top: 5px;
+    }
+
+    .CopyTicketMenu::before {
+        content: '';
+        position: absolute;
+        top: -5px;
+        left: 10px;
+        width: 0;
+        height: 0;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-bottom: 5px solid #ccc;
+    }
+
+    .CopyTicketMenu::after {
+        content: '';
+        position: absolute;
+        top: -4px;
+        left: 10px;
+        width: 0;
+        height: 0;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-bottom: 5px solid #fff;
+    }
+
+    /* Copy Option Styles */
+    .CopyOption {
+        padding: 8px 12px;
+        cursor: pointer;
+        border-bottom: 1px solid #eee;
+        transition: background-color 0.2s ease;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .CopyOption:last-child {
+        border-bottom: none;
+    }
+
+    .CopyOption:hover {
+        background-color: #f5f5f5;
+    }
+
+    .CopyOption .Icon {
+        font-size: 12px;
+    }
+
+    /* Success Message Styles */
+    .CopySuccessMessage {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background: #4CAF50;
+        color: white;
+        padding: 12px 20px;
+        border-radius: 4px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        z-index: 10000;
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    /* Ensure proper positioning in the headline */
+    .Headline h1 {
+        position: relative;
+    }
+
+    .Headline h1 .CopyTicketIcon {
+        vertical-align: middle;
+    }
+
+}
