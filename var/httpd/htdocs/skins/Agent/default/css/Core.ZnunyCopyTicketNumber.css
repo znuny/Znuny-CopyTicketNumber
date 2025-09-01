@@ -13,80 +13,69 @@ did not receive this file, see http://www.gnu.org/licenses/agpl.txt.
 
 @media screen,projection,tv,handheld {
 
-    /* Copy Ticket Icon Styles */
+    /* Copy Ticket Icon Container */
     .CopyTicketIcon {
+        position: relative;
         display: inline-block;
         cursor: pointer;
-        margin-right: 5px;
+        margin-right: 8px;
+        vertical-align: middle;
+        z-index: 1001;
+        overflow: visible; /* ensure dropdown is not clipped */
+    }
+
+    .CopyTicketIcon i {
+        color: #666;
         font-size: 14px;
-        position: relative;
         transition: opacity 0.2s ease;
     }
 
-    .CopyTicketIcon:hover {
+    .CopyTicketIcon:hover i {
         opacity: 0.8;
     }
 
-    /* Hover Menu Styles */
+    /* Dropdown Content (Hidden by Default) */
     .CopyTicketMenu {
         display: none;
         position: absolute;
+        background-color: #f8f9fa;
+        min-width: 180px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 10050; /* keep above surrounding UI */
         top: 100%;
         left: 0;
-        background: #fff;
-        border: 1px solid #ccc;
+        /* Remove vertical gap so hover doesn't break when moving from icon to menu */
+        margin-top: 0;
+        border: 1px solid #dee2e6;
         border-radius: 4px;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-        z-index: 1000;
-        min-width: 180px;
-        margin-top: 5px;
+        white-space: nowrap;
     }
 
-    .CopyTicketMenu::before {
-        content: '';
-        position: absolute;
-        top: -5px;
-        left: 10px;
-        width: 0;
-        height: 0;
-        border-left: 5px solid transparent;
-        border-right: 5px solid transparent;
-        border-bottom: 5px solid #ccc;
-    }
-
-    .CopyTicketMenu::after {
-        content: '';
-        position: absolute;
-        top: -4px;
-        left: 10px;
-        width: 0;
-        height: 0;
-        border-left: 5px solid transparent;
-        border-right: 5px solid transparent;
-        border-bottom: 5px solid #fff;
-    }
-
-    /* Copy Option Styles */
+    /* Links inside the dropdown */
     .CopyOption {
-        padding: 8px 12px;
+        color: #495057;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        border-bottom: 1px solid #e9ecef;
+        font-size: 13px;
         cursor: pointer;
-        border-bottom: 1px solid #eee;
-        transition: background-color 0.2s ease;
-        display: flex;
-        align-items: center;
-        gap: 8px;
+        white-space: nowrap;
     }
 
     .CopyOption:last-child {
         border-bottom: none;
     }
 
+    /* Change color of dropdown links on hover */
     .CopyOption:hover {
-        background-color: #f5f5f5;
+        background-color: #e9ecef;
     }
 
-    .CopyOption .Icon {
-        font-size: 12px;
+    /* Show the dropdown while hovering icon or menu */
+    .CopyTicketIcon:hover .CopyTicketMenu,
+    .CopyTicketMenu:hover {
+        display: block;
     }
 
     /* Success Message Styles */
@@ -109,8 +98,15 @@ did not receive this file, see http://www.gnu.org/licenses/agpl.txt.
         position: relative;
     }
 
+    /* Ensure the copy icon doesn't interfere with text flow */
     .Headline h1 .CopyTicketIcon {
+        display: inline-block;
         vertical-align: middle;
+    }
+    /* Avoid clipping by surrounding containers */
+    .Headline,
+    .Headline h1 {
+        overflow: visible !important;
     }
 
 }
