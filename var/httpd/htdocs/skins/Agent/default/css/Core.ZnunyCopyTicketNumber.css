@@ -39,26 +39,27 @@ did not receive this file, see http://www.gnu.org/licenses/agpl.txt.
         display: none;
         position: absolute;
         background-color: #f8f9fa;
-        min-width: 180px;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        min-width: 140px; /* compact width */
+        box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.15); /* lighter shadow */
         z-index: 10050; /* keep above surrounding UI */
         top: 100%;
         left: 0;
         /* Remove vertical gap so hover doesn't break when moving from icon to menu */
         margin-top: 0;
         border: 1px solid #dee2e6;
-        border-radius: 4px;
+        border-radius: 3px; /* tighter corners */
         white-space: nowrap;
+        font-size: 11px; /* compact font */
     }
 
     /* Links inside the dropdown */
     .CopyOption {
         color: #495057;
-        padding: 12px 16px;
+        padding: 6px 10px; /* compact padding */
         text-decoration: none;
         display: block;
         border-bottom: 1px solid #e9ecef;
-        font-size: 13px;
+        font-size: 11px; /* compact font */
         cursor: pointer;
         white-space: nowrap;
     }
