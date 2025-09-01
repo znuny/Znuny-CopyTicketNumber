@@ -56,7 +56,7 @@ Core.Agent.ZnunyCopyTicketNumber = (function (TargetNS) {
             }
 
             // Create copy icon with hover menu
-            var $CopyIcon = $('<span class="CopyTicketIcon" title="' + Core.Language.Translate('Copy ticket information') + '"><i class="fa-regular fa-clipboard"></i></span>');
+            var $CopyIcon = $('<span class="CopyTicketIcon" title="' + Core.Language.Translate('Copy ticket information') + '"><i class="fa fa-clipboard"></i></span>');
             var $HoverMenu = $('<div class="CopyTicketMenu">' +
                 '<div class="CopyOption" data-action="copy-number" data-number="' + TicketNumber + '">' +
                 Core.Language.Translate('Copy Number') + '</div>' +
