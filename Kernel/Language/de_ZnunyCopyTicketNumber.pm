@@ -16,12 +16,10 @@ use utf8;
 sub Data {
     my $Self = shift;
 
-    # Custom language strings for ZnunyCopyTicketNumber
-    $Self->{Translation}->{'Copy ticket information'} = 'Ticket-Informationen kopieren';
-    $Self->{Translation}->{'Copy Ticket Number'} = 'Ticketnummer kopieren';
+    $Self->{Translation}->{'Copy ticket information'}    = 'Ticket-Informationen kopieren';
+    $Self->{Translation}->{'Copy Ticket Number'}         = 'Ticketnummer kopieren';
     $Self->{Translation}->{'Copy Ticket Number + Title'} = 'Ticketnummer + Titel kopieren';
-    $Self->{Translation}->{'Copied to clipboard!'} = 'In Zwischenablage kopiert!';
-
+    $Self->{Translation}->{'Copied to clipboard!'}       = 'In Zwischenablage kopiert!';
 
     $Self->{JavaScriptStrings} //= [];
     push @{$Self->{JavaScriptStrings}},(
