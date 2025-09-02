@@ -1,3 +1,3 @@
 # Funktionalität
 
-Im Znuny Standard (ist es nicht möglich/ist es eingeschränkt möglich).... Diese Erweiterung enthält die Funktionalität um ...
+Dieses Paket fügt ein Kopier-Symbol vor der Ticketnummer in der Ticket-Detailansicht hinzu, wodurch Agenten entweder nur die Ticketnummer oder die Ticketnummer mit Titel einfach in die Zwischenablage kopieren können.

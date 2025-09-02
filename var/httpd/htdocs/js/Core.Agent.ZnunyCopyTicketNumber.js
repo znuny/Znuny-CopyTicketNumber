@@ -44,11 +44,11 @@ Core.Agent.ZnunyCopyTicketNumber = (function (TargetNS) {
 
         var HeadlineText = $Headline.text();
         var TicketMatch = HeadlineText.match(/Ticket#(\d+)/);
-        
+
         if (TicketMatch) {
             var TicketNumber = TicketMatch[1];
             var TicketTitle = '';
-            
+
             // Extract title after the "—" character
             var TitleMatch = HeadlineText.match(/—\s*(.+)/);
             if (TitleMatch) {
@@ -59,25 +59,25 @@ Core.Agent.ZnunyCopyTicketNumber = (function (TargetNS) {
             var $CopyIcon = $('<span class="CopyTicketIcon" title="' + Core.Language.Translate('Copy ticket information') + '"><i class="fa fa-clipboard"></i></span>');
             var $HoverMenu = $('<div class="CopyTicketMenu">' +
                 '<div class="CopyOption" data-action="copy-number" data-number="' + TicketNumber + '">' +
-                Core.Language.Translate('Copy Number') + '</div>' +
+                Core.Language.Translate('Copy Ticket Number') + '</div>' +
                 '<div class="CopyOption" data-action="copy-number-title" data-number="' + TicketNumber + '" data-title="' + TicketTitle + '">' +
-                Core.Language.Translate('Copy Number + Title') + '</div>' +
+                Core.Language.Translate('Copy Ticket Number + Title') + '</div>' +
                 '</div>');
 
             // Clear the headline content and rebuild it properly
             $Headline.empty();
-            
+
             // Add the copy icon first
             $Headline.append($CopyIcon);
-            
+
             // Add the ticket text
             $Headline.append('Ticket#' + TicketNumber);
-            
+
             // Add the title if it exists
             if (TicketTitle) {
                 $Headline.append(' — ' + TicketTitle);
             }
-            
+
             // Add the hover menu to the copy icon
             $CopyIcon.append($HoverMenu);
         }
@@ -90,11 +90,11 @@ Core.Agent.ZnunyCopyTicketNumber = (function (TargetNS) {
         $(document).on('click', '.CopyOption', function (Event) {
             Event.preventDefault();
             Event.stopPropagation();
-            
+
             var Action = $(this).data('action');
             var TicketNumber = $(this).data('number');
             var TicketTitle = $(this).data('title');
-            
+
             if (Action === 'copy-number') {
                 TargetNS.CopyToClipboard(TicketNumber);
             } else if (Action === 'copy-number-title') {
@@ -133,14 +133,14 @@ Core.Agent.ZnunyCopyTicketNumber = (function (TargetNS) {
         document.body.appendChild(TextArea);
         TextArea.focus();
         TextArea.select();
-        
+
         try {
             document.execCommand('copy');
             TargetNS.ShowCopySuccess();
         } catch (Error) {
             console.error('Copy failed:', Error);
         }
-        
+
         document.body.removeChild(TextArea);
     };
 
@@ -150,7 +150,7 @@ Core.Agent.ZnunyCopyTicketNumber = (function (TargetNS) {
     TargetNS.ShowCopySuccess = function () {
         var $SuccessMessage = $('<div class="CopySuccessMessage">' + Core.Language.Translate('Copied to clipboard!') + '</div>');
         $('body').append($SuccessMessage);
-        
+
         setTimeout(function () {
             $SuccessMessage.fadeOut(function () {
                 $(this).remove();
