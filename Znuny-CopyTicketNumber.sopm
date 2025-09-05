@@ -1,13 +1,14 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <otrs_package version="1.0">
     <Name>Znuny-CopyTicketNumber</Name>
-    <Version>1.0.0</Version>
+    <Version>6.5.1</Version>
     <Framework>6.5.x</Framework>
     <Vendor>Znuny GmbH</Vendor>
     <URL>https://znuny.com/</URL>
     <License>GNU AFFERO GENERAL PUBLIC LICENSE Version 3, November 2007</License>
     <Description Lang="en">Adds a copy icon before the ticket number in the ticket zoom view, allowing agents to easily copy either the ticket number alone or the ticket number with title to the clipboard.</Description>
     <Description Lang="de">Fügt ein Kopier-Symbol vor der Ticketnummer in der Ticket-Detailansicht hinzu, wodurch Agenten entweder nur die Ticketnummer oder die Ticketnummer mit Titel einfach in die Zwischenablage kopieren können.</Description>
+    <ChangeLog Version="6.5.1" Date="2025-09-05 09:31:08 +0200">Initial release for Znuny 6.5.</ChangeLog>
     <Filelist>
         <File Permission="660" Location="Kernel/Config/Files/XML/ZnunyCopyTicketNumber.xml"/>
         <File Permission="660" Location="Kernel/Language/de_ZnunyCopyTicketNumber.pm"/>
