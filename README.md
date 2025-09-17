@@ -3,7 +3,7 @@
   <img alt="Znuny' Dark: 'Znuny'" src="https://www.znuny.com/assets/znuny-logo-black.svg" width="384" height="96">
 </picture>
 
-![Build status](https://badge.proxy.znuny.com/Znuny-CopyTicketNumber/rel-6_5)
+![Build status](https://badge.proxy.znuny.com/Znuny-CopyTicketNumber/rel-7_2)
 
 # Znuny-CopyTicketNumber
 
