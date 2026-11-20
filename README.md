@@ -1,9 +1,18 @@
+<div align="center">
+  <a href="https://www.znuny.org">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://www.znuny.com/assets/znuny-logo.svg">
+      <img alt="Znuny" src="https://www.znuny.com/assets/znuny-logo-black.svg" width="300">
+    </picture>
+  </a>
+
+  ![Build status](https://badge.proxy.znuny.com/Znuny-CopyTicketNumber/dev)
+</div>
+
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://www.znuny.com/assets/znuny-logo.svg" width="384" height="96">
   <img alt="Znuny' Dark: 'Znuny'" src="https://www.znuny.com/assets/znuny-logo-black.svg" width="384" height="96">
 </picture>
-
-![Build status](https://badge.proxy.znuny.com/Znuny-CopyTicketNumber/rel-7_2)
 
 # Znuny-CopyTicketNumber
 
